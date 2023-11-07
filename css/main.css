@@ -1,0 +1,612 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;1,200&family=Poppins:wght@100&display=swap');
+
+/* general settings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+    transition: all 0.2s linear;
+    font-size: 72.5%;
+}
+
+html {
+    font-size: 72.5%;
+    overflow-x: hidden;
+    /* applies a smooth transition */
+    scroll-behavior: smooth;
+}
+
+body {
+    font-size: 24%;
+    background-color: #f7f7f7;
+    font-family: "Poppins", sans-serif;
+}
+
+/* applies styles to parts of the document
+that were selected by the user*/
+*::selection {
+    background: #8257e6;
+    color: #fff;
+}
+
+/* Header */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.7rem 10%;
+    height: 6.5rem;
+    background-color: #252627;
+    box-shadow: 0 1px 4px rgba(146, 161, 176, 0.3);
+}
+
+header .logo {
+    font-size: 1.9rem;
+    font-weight: 800;
+    text-decoration: none;
+    color: #8b3dff;
+}
+
+header .logo:hover {
+    color: #ffd55a;
+}
+
+header .navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .navbar li {
+    margin-left: 2.5rem;
+}
+
+header .navbar ul li a {
+    font-size: 1.57rem;
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+    letter-spacing: 0.04rem;
+    transition: 0.2s;
+}
+
+header .navbar ul li a:hover {
+    color: #ffd55a;
+    border-bottom: 0.2rem solid #ffd55a;
+    padding: 0.5rem 0;
+}
+
+/*Styling the burger*/
+#menu {
+    font-size: 3rem;
+    cursor: pointer;
+    color: #8b3dff;
+    display: none;
+}
+
+/*Menu responsive*/
+
+@media (max-width: 768px){
+    #menu {
+        display: block;
+    }
+
+    header .navbar {
+        position: fixed;
+        top: 6.5rem;
+        right: -120%;
+        width: 75%;
+        height: 100%;
+        text-align: left;
+        align-items: flex-start;
+        background-color: #8b3dff;
+    }
+
+    header .navbar ul {
+        flex-flow: column;
+        padding: 1rem;
+    }
+
+    heaader .navbar ul li {
+        text-align: center;
+        width: 100%;
+        margin: 1rem 0;
+        border-radius: 0.5rem;
+        width: 26rem;
+    }
+
+    header .navbar ul li a {
+        display: block;
+        padding: 1rem;
+        text-align: left;
+        color: #fff;
+        font-size: 2rem;
+    }
+
+    header .navbar ul li a:hover {
+        padding: 1rem;
+        color: #ffd55a;
+        border-radius: 0.5rem;
+        border-bottom: 0.5rem solid #ffd55a;
+    }
+
+    /*The nav-togle class is added to ul
+    with JavaScript when the user clicks
+    on the icon*/
+    header .navbar.nav-toggle {
+        right: 0;
+    }
+}
+
+section {
+    min-height: 100vh;
+    padding: 2rem 9%;
+}
+
+.home {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    min-height: 100vh;
+    align-items: center;
+    background-color: #191919;
+}
+
+.home #particles-js {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.home .content {
+    flex: 1 1 40rem;
+    padding-top: 1rem;
+    z-index: 1;
+}
+
+.home::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.home .image img {
+    width: 70%;
+    margin-left: 6rem;
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+}
+
+.home .image img:hover {
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.5);
+}
+
+.home .image {
+    flex: 1 1 40rem;
+    z-index: 1;
+}
+
+.home .content h2 {
+    margin-top: 4rem;
+    font-size: 4rem;
+    font-weight: 800;
+    color: #8b3dff;
+}
+
+.home .content h2 span {
+    font-size: 5rem;
+    font-weight: 800;
+    color: #ffd55a;
+}
+
+.home .content p {
+    font-size: 2.5rem;
+    color: #fff;
+    font-weight: 600;
+    padding: 1rem 0;
+}
+
+.home .content p span {
+    font-size: 2.5rem;
+    color: rgb(148, 8, 8);
+    font-weight: 600;
+    padding: 1rem 0;
+}
+
+.home .btn {
+    margin-top: 1rem;
+    position: absolute;
+    line-height: 0;
+    padding: 1.6rem 3rem;
+    border-radius: 4em;
+    transition: 0.5s;
+    color: #fff;
+    background: #2506ad;
+    box-shadow: 0px 5px 18px rgba(48, 68, 247, 0.6);
+    font-family: "Nunito", sans-serif;
+}
+
+.home .btn span {
+    font-weight: 700;
+    font-size: 1.5rem;
+    letter-spacing: 0.1rem;
+}
+
+.home .btn i {
+    margin-left: 0.3rem;
+    font-size: 1.5rem;
+    transition: 0.3s;
+}
+
+.home .btn:hover {
+    background: #ffd55a;
+    color: #191919;
+}
+
+.home .btn:hover i {
+    transform: translateX(5px);
+}
+
+.social {
+    position: relative;
+    margin-top: 9rem;
+}
+
+.social .social-icons {
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+
+
+.social .social-icons li {
+    display: inline-block;
+    margin-bottom: 0.5rem;
+}
+
+.social-icons a {
+    font-size: 2rem;
+    display: inline-block;
+    line-height: 3rem;
+    color: #ffd55a;
+    background-color:rgba(48, 68, 247, 0.6);
+    width: 3rem;
+    height: 3rem;
+    text-align: center;
+    margin-right: 1rem;
+    border-radius: 100%;
+    transition: all 0.2s linear;
+}
+
+.social-icons a:focus,
+.social-icons a:hover {
+    color: #2506ad;
+    background-color: #ffd55a;
+}
+
+/* .social-icons a.github:hover {
+    background-color: #0e0e0e;
+} */
+
+/*Home responsive*/
+@media (max-width: 450px) {
+    .home .btn {
+        font-size: 0.1rem;
+        margin: 0.5rem;
+    }
+
+    .social {
+        margin-top: 12rem;
+    }
+
+    .home .image img {
+        margin-top: -2rem;
+    }
+
+    .home .content {
+        font-size: 2.2rem;
+    }
+
+    .home .content p span {
+        font-size: 2.2rem;
+    }
+}
+
+/*Section About*/
+.header {
+    font-size: 3.5rem;
+    color: #8b3dff;
+    font-weight: 800;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header span {
+    font-size: 3.5rem;
+    color: #ffd55a;
+    text-transform: none;
+    margin-left: 1rem;
+}
+
+.header i {
+    margin-right: 1rem;
+}
+
+.about {
+    background-color: #191919;
+}
+
+.about .line {
+    display: flex;
+    /* flex-direction: row; */
+    gap: 2rem;
+    /* flex-wrap: wrap; */
+    padding: 4rem;
+}
+
+.about .line .image {
+    text-align: center;
+    flex: 1 1 35rem;
+    padding: 3rem;
+}
+
+.about .line .image img {
+    /* margin: 4rem; */
+    width: 30rem;
+    height: auto;
+    border-radius: 5%;
+    box-shadow: rgba(255, 255, 255, 0.5);
+    mix-blend-mode: luminosity;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.about .line .image img:hover {
+    mix-blend-mode: normal;
+    transition: 0.5s;
+}
+
+.about .line .content {
+    flex: 1 1 45rem;
+    padding: 3rem;
+}
+
+.about .line .content h3 {
+    color: #8b3dff;
+    font-size: 2.5rem;
+    text-transform: none;
+}
+
+.about .line .content .tag {
+    font-size: 1.4rem;
+    color: #ffd55a;
+    font-weight: 600;
+    margin-top: 1rem;
+}
+
+.about .line  .content p {
+    color: #fff;
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+    font-family: "Nunito";
+    font-weight: none;
+    text-transform: none;
+}
+
+.about .line .content .box-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    font-family: "Nunito";
+    font-weight: 600;
+}
+
+.about .linha .content .box-content .box p {
+    text-transform: none;
+}
+
+.about .line .content .box-content .box p span {
+    color: #ffd55a;
+    font-size: 1.5rem;
+    text-transform: none;
+}
+
+.resumebtn {
+    margin-top: 5rem;
+}
+
+.resumebtn .btn {
+    padding: 1.7rem 2.5rem;
+    border-radius: 0.5rem;
+    transition: 0.3s;
+    color: #fff;
+    background: #ffd55a;
+    box-shadow: 0px 5px 10px #fff;
+    font-family: "Nunito", sans-serif;
+}
+
+.resumebtn .btn span {
+    font-weight: 600;
+    font-size: 1.8rem;
+    letter-spacing: 0.1rem;
+}
+
+.resumebtn .btn i {
+    margin-left: 0.3rem;
+    font-size: 1.2rem;
+    transition: 0.3s;
+}
+
+.resumebtn .btn:hover {
+    background: #8b3dff;
+}
+
+.resumebtn .btn:hover i {
+    transform: translateX(5px);
+}
+
+/*Responsive About*/
+@media (max-width: 1000px) {
+
+    .about .line {
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 0.5rem;
+        margin-bottom: 7rem;
+        gap: 0.5rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .header {
+        display: block;
+    }
+
+    .about .line .image {
+        margin-top: 2rem;
+    }
+
+    .about .line .image img {
+        margin: 0 auto;
+        width: 80%;
+        mix-blend-mode: normal;
+    }
+
+    .about .line {
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 0.5rem;
+        margin-bottom: 7rem;
+        gap: 0.5rem;
+    }
+
+    .about .line .content {
+        padding: 1rem;
+    }
+
+    .about .line .content .box-content {
+        gap: 0;
+    }
+
+    .about .line .content .box-content .box p span {
+        display: block;
+    }
+}
+
+/*Skills*/
+.skills {
+    min-height: 90vh;
+    background: linear-gradient(to bottom, #8b3dff, #ffd55a);
+}
+
+.skills h2 {
+    color: #fff;
+}
+
+.skills .header span {
+    color: #ffd55a;
+}
+
+.skills .content {
+    background: #191919ca;
+    color: #fff;
+    border-radius: 1rem;
+    padding: 2rem;
+    width: 100%;
+    margin: auto;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+.skills .content .bar img {
+    width: 4rem;
+    height: 4rem;
+}
+
+.skills .content .line {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1.8rem;
+}
+
+.skills .content .bar {
+    margin-bottom: 2rem;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 10px rgba(122, 121, 121, 0.2);
+    background: #555252ca;
+    transition: 0.2s;
+}
+
+.skills .content .bar:hover {
+    box-shadow:  0 8px 10px rgba(255, 255, 255, 0.5) !important;
+    background-color: rgba(0, 0, 0, 0.9) !important;
+}
+
+.skills .content .bar .info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.skills .content .bar .info i {
+    font-size: 2rem;
+}
+
+.skills .content .bar .info span {
+    font-size: 2rem;
+    font-weight: 500;
+    font-family: "Poppins";
+    margin-left: 0.5rem;
+}
+
+/*Responsive Skills*/
+@media (max-width: 700px) {
+    .header {
+        font-size: 2rem;
+    }
+
+    .skills .content {
+        flex-wrap: wrap;
+        padding: 0;
+        margin: 0;
+    }
+
+    .skills .content .line {
+        display: grid;
+        margin: 1rem;
+        padding: 2rem 0.2rem 2rem 0.2rem;
+        gap: 1rem;
+    }
+
+    .skills .content {
+        display: flex;
+        justify-content: center;
+        margin-top: 5px;
+        width: 100%;
+    }
+}
