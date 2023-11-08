@@ -439,7 +439,7 @@ section {
     padding: 1.7rem 2.5rem;
     border-radius: 0.5rem;
     transition: 0.3s;
-    color: #fff;
+    color: #252627;;
     background: #ffd55a;
     box-shadow: 0px 5px 10px #fff;
     font-family: "Nunito", sans-serif;
@@ -458,6 +458,7 @@ section {
 }
 
 .resumebtn .btn:hover {
+    color: #fff;
     background: #8b3dff;
 }
 
@@ -610,3 +611,149 @@ section {
         width: 100%;
     }
 }
+
+/*Projects*/
+.projects {
+    background: linear-gradient(to bottom, #252627, #191919);
+}
+
+.projects h2 {
+    color: #fff;
+    padding: 1rem;
+}
+
+.projects .header span {
+    color: #ffd55a;
+}
+
+.projects .box-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin: 2rem;
+}
+
+.projects .box-content .box {
+    flex: 1 1 30rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    height: 30rem;
+}
+
+.projects .box-content .box img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.projects .box-content .box .content {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 85%;
+    left: 0;
+    background: #252627f5;
+    display: flex;
+    flex-direction: column;
+}
+
+.projects .box-content .box .content .tag {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 4.5rem;
+    width: 100%;
+    padding-left: 1rem;
+    background: #2506ad;;
+}
+
+.projects .box-content .box .content .tag h3 {
+    font-size: 2rem;
+    color: #ffd55a;
+}
+
+.projects .box-content .box:hover .content {
+    top: 25%;
+}
+
+.projects .desc {
+    margin: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.projects .desc p {
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.projects .desc .btns {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    margin-top: 2rem;
+}
+
+.projects .desc .btns .btn {
+    line-height: 0;
+    display: inline;
+    padding: 1.5rem 2.5rem;
+    border-radius: 0.5;
+    font-size: 1.5rem;
+    color: #fff;
+    background: rgb(12, 12, 12);
+}
+
+.projects .desc .btns .btn i {
+    margin-right: 1rem;
+}
+
+.projects .desc .btns .btn:hover {
+    background: #ffd55a;
+    color: #191919;
+}
+
+.projects .see-all {
+    display: flex;
+    justify-content: center;
+}
+
+.projects .see-all .btn {
+    background: #ffd55a;
+    position: relative;
+    line-height: 0;
+    padding: 1.6rem 3rem;
+    border-radius: 0.5rem;
+    transition: 0.5s;
+    font-weight: 700;
+    box-shadow: 0px 5px 10px #787676e1;
+    text-align: center;
+}
+
+.projects .see-all .btn span {
+    font-weight: 600;
+    font-size: 1.7rem;
+    font-family: "Nunito", sans-serif;
+}
+
+.projects .see-all .btn i {
+    margin-left: 1rem;
+    font-size: 1.5rem;
+    transition: 0.3s;
+}
+
+.projects .see-all .btn:hover {
+    background: #fff;
+    color: #000;
+    box-shadow: 0px 5px 10px #efb916;
+}
+
+.projects .see-all .btn:hover i {
+    transform: translateX(5px);
+}
+
+
