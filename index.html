@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Portfólio</title>
+    <title>Naiara - Portfólio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel='stylesheet' type='text/css' media='screen' href='css/main.css'>
@@ -340,12 +340,91 @@
                 </a>
             </div>
         </section>
+
+        <!--Contacts-->
+        <section id="contacts" class="contacts">
+            <h2 class="header">
+                <i class="fas fa-headset">
+                </i>Entre em <span>Contato</span>
+            </h2>
+
+            <div class="container">
+                <div class="content">
+                    <div class="box-image">
+                        <img src="img/contact.svg" alt="Imagem de pessoa entrando em contato">
+                    </div>
+
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <div class="field">
+                                <input type="text" name="name" placeholder="Nome" required>
+                                <i class="fas fa-user"></i>
+                            </div>
+
+                            <div class="field">
+                                <input type="text" name="email" placeholder="E-mail" required>
+                                <i class="fas fa-envelope"></i>
+                            </div>
+
+                            <div class="field">
+                                <input type="text" name="fone" placeholder="Telefone" required>
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+
+                            <div class="message">
+                                <textarea name="message" placeholder="Mensagem" required></textarea>
+                                <i class="fas fa-comment-dots"></i>
+                            </div>
+                        </div>
+                        <div class="box-btn">
+                            <button type="submit">
+                                Enviar <i class="fa fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </section>
     </main>
 
     <!--Footer-->
     <footer>
+        <section class="footer">
+            <div class="box-container">
+                <div class="box">
+                    <h3>Portfólio Naiara Martins</h3>
+                    <p>Obrigada por Visitar meu Portifólio. <br /> <br />
+                </div>
 
+                <div class="box">
+                    <h3>Links Rápidos</h3>
+                    <a href="#home"><i class="fas fa-chevron-circle-right"></i> Home</a>
+                    <a href="#about"><i class="fas fa-chevron-circle-right"></i> Sobre</a>
+                    <a href="#skills"><i class="fas fa-chevron-circle-right"></i> Conhecimentos</a>
+                    <a href="#projects"><i class="fas fa-chevron-circle-right"></i> Trabalhos</a>
+                </div>
+
+                <div class="box">
+                    <h3>Informações para Contato</h3>
+                    <p> <i class="fas fa-phone"></i>+48 98421-2506</p>
+                    <p> <i class="fas fa-envelope"></i>naiaraxf@gmail.com</p>
+                    <div class="share">
+
+                        <a href="https://www.linkedin.com/in/naiarafxmartins/" class="fab fa-linkedin"
+                            aria-label="LinkedIn" target="_blank"></a>
+                        <a href="https://github.com/naiaraxavier" class="fab fa-github" aria-label="GitHub"
+                            target="_blank"></a>
+                        <a href="mailto:naiaraxf@gmail.com" class="fas fa-envelope" aria-label="Mail"
+                            target="_blank"></a>
+                    </div>
+                </div>
+            </div>
+        </section>
     </footer>
+
+    <!-- Btn start-->
+    <a href="#home" aria-label="ScrollTop" class="fas fa-angle-up" id="scroll-top"></a>
 
     <!--Bibliotecas JS-->
     <script src="js/particles.min.js"></script>
