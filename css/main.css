@@ -81,6 +81,10 @@ header .navbar ul li a {
     transition: 0.2s;
 }
 
+header .navbar ul li a.active {
+    color: #ffd55a;
+}
+
 header .navbar ul li a:hover {
     color: #ffd55a;
     border-bottom: 0.2rem solid #ffd55a;
@@ -226,7 +230,7 @@ section {
 
 .home .content p span {
     font-size: 2.5rem;
-    color: rgb(148, 8, 8);
+    color: #ffd55a;
     font-weight: 600;
     padding: 1rem 0;
 }
@@ -754,24 +758,43 @@ section {
     transform: translateX(5px);
 }
 
-@media (max-width: 400px) {
+@media (max-width: 700px) {
+    .projects .desc p {
+        font-size: 1.2rem;
+    }
+
+    .projects .desc .btns {
+        flex-wrap: nowrap;
+    }
+
+    .projects .desc .btns .btn {
+        padding: 1rem;
+        font-size: 1rem;
+    }
+
+    .projects .desc .btns .btn i {
+        margin-right: 0.5rem;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 470px) {
     .projects .desc p {
         font-size: 1rem;
     }
 
     .projects .desc .btns {
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
     }
 
     .projects .desc .btns .btn {
-        line-height: 0;
-        padding: auto;
-        font-size: 0.5rem;
+        padding: 0.3rem;
+        font-size: 0.8rem;
     }
 
     .projects .desc .btns .btn i {
         margin-right: 0.1rem;
-        font-size: 0.5rem;
+        font-size: 0.8rem;
     }
 }
 
